@@ -1,1 +1,1 @@
-<p>app-list works!</p>
+<app-list-item *ngFor="let movie of movies$ | async" [item]="movie"></app-list-item>
