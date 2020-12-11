@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Movie } from '../models/movie.model';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-list',
@@ -10,11 +11,18 @@ import { Movie } from '../models/movie.model';
 })
 export class AppListComponent implements OnInit {
 
-  constructor(private store: Store<{ movies: Movie[] }>) { }
+  constructor(
+    private store: Store<{ movies: Movie[] }>,
+    private movieService: MovieService
+  ) { }
 
-  movies$: Observable<Movie[]> = this.store.select(state => state.movies);
+  movies$: Observable<Movie[]> = this.movieService.getMoviesByDescendingRate();
 
   ngOnInit(): void {
-    this.store.dispatch({ type: '[List Page] Load Movies'});
+    this.store.dispatch({ type: '[List Page] Load Movies' });
+  }
+
+  startRandomRate(): void {
+    this.store.dispatch({ type: '[List Page] Rate Movies' });
   }
 }
