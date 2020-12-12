@@ -1,3 +1,17 @@
-<app-list-item *ngFor="let movie of movies$ | async" [item]="movie"></app-list-item>
+<!-- <h1>Movie Ratings</h1> -->
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let header of tableHeaders">{{header}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies$ | async">
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.rating }}</td>    
+        </tr>        
+    </tbody>
+</table>
+
 <button (click)="startRandomRate()" *ngIf="!isRating">Start Rating</button>
-<button (click)="stopRandomRate()" *ngIf="isRating">Stop Rating</button>
+<button (click)="stopRandomRate()" *ngIf="isRating" class="rating">Stop Rating ({{ countdown$ | async }})</button>

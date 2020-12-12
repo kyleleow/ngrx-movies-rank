@@ -6,15 +6,13 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { AppComponent } from './app.component';
 import { AppListComponent } from './app-list/app-list.component';
-import { AppListItemComponent } from './app-list-item/app-list-item.component';
 import * as fromMovie from './reducers/movie.reducer';
 import { MovieEffects } from './effects/movie.effects';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppListComponent,
-    AppListItemComponent
+    AppListComponent
   ],
   imports: [
     BrowserModule,
