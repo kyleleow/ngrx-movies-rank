@@ -19,7 +19,7 @@ export class MovieService {
   ) { }
 
   getAll(): Observable<Movie[]> {
-    return this.http.get<Movie[]>('../assets/movies.json');
+    return this.http.get<Movie[]>('/assets/movies.json');
   }
 
   getMoviesByState(): Observable<Movie[]> {
