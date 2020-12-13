@@ -20,6 +20,23 @@ export function getRandomInteger(min: number = 1, max: number = 10): number {
     return Math.floor(Math.random() * max) + min;
 }
 
+export function getRandomIntegerArray(referenceArray: any[], newArrayLength: number): any[] {
+  const result = new Array(newArrayLength);
+  let referenceArrayLength = referenceArray.length;
+  const taken = new Array(referenceArrayLength);
+
+  if (newArrayLength > referenceArrayLength) {
+    throw new RangeError('getRandom: more elements taken than available');
+  }
+
+  while (newArrayLength--) {
+      const x = Math.floor(Math.random() * referenceArrayLength);
+      result[newArrayLength] = referenceArray[x in taken ? taken[x] : x];
+      taken[x] = --referenceArrayLength in taken ? taken[referenceArrayLength] : referenceArrayLength;
+  }
+  return result;
+}
+
 export function getTimer(time: number): Observable<number> {
     if (time < 0) {
         console.warn('Invalid time given to timer, default to 0.')

@@ -1,8 +1,13 @@
 import { createAction, props } from '@ngrx/store';
 import { Movie } from '../models/movie.model';
 
-export const rateMovies = createAction(
-  '[List Page] Rate Movies',
+export const rateAllMovies = createAction(
+  '[List Page] Rate All Movies',
+  props<{ movies: Movie[] }>()
+);
+
+export const rateRandomMovies = createAction(
+  '[List Page] Rate Random Movies',
   props<{ movies: Movie[] }>()
 );
 

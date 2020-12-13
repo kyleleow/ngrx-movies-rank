@@ -54,7 +54,7 @@ export class AppListComponent implements OnInit {
       const timeoutInSeconds = getRandomInteger();
       this.resetCountdown(timeoutInSeconds);
       this.ratingTimeout = window.setTimeout(() => {
-        this.store.dispatch({ type: '[List Page] Rate Movies' });
+        this.store.dispatch({ type: '[List Page] Rate Random Movies' });
         this.setRatingTimeout();
       }, timeoutInSeconds * 1000);
     }
