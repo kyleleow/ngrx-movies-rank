@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, timer } from 'rxjs';
@@ -9,7 +10,15 @@ import { getRandomInteger, getTimer } from '../utilities';
 @Component({
   selector: 'app-list',
   templateUrl: './app-list.component.html',
-  styleUrls: ['./app-list.component.scss']
+  styleUrls: ['./app-list.component.scss'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: '0' }),
+        animate('.5s ease-out', style({ opacity: '1' })),
+      ])
+    ])
+  ]
 })
 export class AppListComponent implements OnInit {
 

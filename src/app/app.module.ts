@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
@@ -16,6 +17,7 @@ import { MovieEffects } from './effects/movie.effects';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot({ movies: fromMovie.movieReducer}),
     HttpClientModule,
     EffectsModule.forRoot([MovieEffects])
