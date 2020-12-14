@@ -19,6 +19,7 @@ import { getRandomInteger, getTimer } from '../utilities';
     ])
   ]
 })
+
 export class AppListComponent implements OnInit {
 
   constructor(

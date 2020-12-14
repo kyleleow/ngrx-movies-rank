@@ -26,7 +26,7 @@ export function getRandomIntegerArray(referenceArray: any[], newArrayLength: num
   const taken = new Array(referenceArrayLength);
 
   if (newArrayLength > referenceArrayLength) {
-    throw new RangeError('getRandom: more elements taken than available');
+    throw new RangeError('getRandomIntegerArray: more elements taken than available');
   }
 
   while (newArrayLength--) {
