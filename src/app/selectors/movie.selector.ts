@@ -1,27 +1,19 @@
-import { createSelector } from '@ngrx/store';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { Movie } from '../models/movie.model';
+import { compareRateInDescending } from '../utilities';
 
 export interface AppState {
     movies: Movie[];
 }
 
-export const selectMovieFeature = (state: AppState) => state.movies;
+export const selectMovieFeature = createFeatureSelector<
+    AppState,
+    Movie[]
+>('movies');
 
 export const selectMovieByDescendingRating = createSelector(
     selectMovieFeature,
     (movies: Movie[]) => {
-        return movies.sort(compareRatingInDescending);
+        return movies.sort(compareRateInDescending);
     }
 );
-
-export const compareRatingInDescending = (a: Movie, b: Movie) => {
-    if (a.rating > b.rating) {
-        return -1;
-    }
-    else if (a.rating < b.rating) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-};
