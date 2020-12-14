@@ -11,7 +11,7 @@ export const initialState: Movie[] = [];
 export const movieReducer = createReducer(
   initialState,
   on(ListPageActions.rateAllMovies, state => state.map(movie => ({...movie, rating: Math.floor(Math.random() * 10) + 1}))),
-  on(ListPageActions.moviesLoadSuccessfully, (state, {payload}) => payload),
+  on(ListPageActions.moviesLoadSuccessfully, (state, {payload}) => payload.slice()),
   on(ListPageActions.rateRandomMovies, state => {
     const randomElements = getRandomIntegerArray(state, getRandomInteger());
     return state.map(movie => {
