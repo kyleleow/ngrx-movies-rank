@@ -9,7 +9,7 @@ Demo: [link](https://kyleleow.github.io/ngrx-movies-rank/)
 7. This project is **mobile-responsive**
 
 ## Unit Tests
-Total of 9 tests <sup id="a1">[1](#myfootnote1)</sup> were written for the following `.ts`:
+Total of 9 tests <sup id="a1">[1](#myfootnote1)</sup> were written for the following `.ts` in their corresponding `.spec.ts`:
 - `app-component`
 - `app-list.compononent`
 - `movie.service`
