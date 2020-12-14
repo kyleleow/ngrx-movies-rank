@@ -18,7 +18,7 @@ Total of 9 tests <sup id="a1">[1](#myfootnote1)</sup> were written for the follo
 
 ## Deployment
 Deployment to GitHub is using [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages).
-Running `ng deploy` will deploy GitHub repo defined in `angular.json`
+Running `ng deploy` will deploy to GitHub repo defined in `angular.json`
 
 ## Commit Message
 Format is following the [angular commit message format](https://github.com/angular/angular/blob/master/CONTRIBUTING.md)
