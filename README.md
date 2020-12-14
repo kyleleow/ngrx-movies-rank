@@ -9,7 +9,7 @@ Demo: [link](https://kyleleow.github.io/ngrx-movies-rank/)
 7. This project is **mobile-responsive**
 
 ## Unit Tests
-Total of 9 tests <sup>[1](#myfootnote1)</sup> were written for the following `.ts`:
+Total of 9 tests <sup id="a1">[1](#myfootnote1)</sup> were written for the following `.ts`:
 - `app-component`
 - `app-list.compononent`
 - `movie.service`
@@ -23,5 +23,5 @@ Running `ng deploy` will deploy GitHub repo defined in `angular.json`
 ## Commit Message
 Format is following the [angular commit message format](https://github.com/angular/angular/blob/master/CONTRIBUTING.md)
 
-
-<a name="myfootnote1">1</a>: Footnote content goes here: Tests were written with purpose to verify the main functionalities. Hence, it does not cover e2e test and does not achieve 100% code coverage.
+---
+<a id="myfootnote1">1</a>: Tests were written with the purpose to verify the main functionalities. Hence, it does not cover e2e tests and does not achieve 100% code coverage.[↩](#a1)
