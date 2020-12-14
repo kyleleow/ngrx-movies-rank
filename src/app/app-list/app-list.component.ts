@@ -1,8 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable, timer } from 'rxjs';
-import { map, take } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { Movie } from '../models/movie.model';
 import { MovieService } from '../movie.service';
 import { getRandomInteger, getTimer } from '../utilities';
