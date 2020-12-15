@@ -14,7 +14,7 @@ import { getRandomInteger, getTimer } from '../utilities';
     trigger('fadeIn', [
       transition(':enter', [
         style({ opacity: '0' }),
-        animate('.5s ease-out', style({ opacity: '1' })),
+        animate('.5s ease-in-out', style({ opacity: '1' })),
       ])
     ])
   ]
