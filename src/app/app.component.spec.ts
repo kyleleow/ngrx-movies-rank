@@ -16,9 +16,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ngrx-movies-rank'`, () => {
+  it(`should have as title 'ngrx-movies-rate'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ngrx-movies-rank');
+    expect(app.title).toEqual('ngrx-movies-rate');
   });
 });

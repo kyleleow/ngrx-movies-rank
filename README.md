@@ -1,5 +1,5 @@
-# NgrxMoviesRank
-Demo: [link](https://kyleleow.github.io/ngrx-movies-rank/)
+# NgrxMoviesRate
+Demo: [link](https://kyleleow.github.io/ngrx-movies-rate/)
 1. Uses only one custom UI component `<app-list>` that includes a table list and a button, all design are custom-coded, no external UI libraries were used
 2. Calls a mock API by using `http.get()` to retrieve local JSON file to be used as movies data
 3. Using `ngRx` for state management

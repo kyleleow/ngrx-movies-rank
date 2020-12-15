@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngrx-movies-rank": {
+    "ngrx-movies-rate": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngrx-movies-rank",
+            "outputPath": "dist/ngrx-movies-rate",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngrx-movies-rank:build"
+            "browserTarget": "ngrx-movies-rate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngrx-movies-rank:build:production"
+              "browserTarget": "ngrx-movies-rate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngrx-movies-rank:build"
+            "browserTarget": "ngrx-movies-rate:build"
           }
         },
         "test": {
@@ -116,22 +116,25 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngrx-movies-rank:serve"
+            "devServerTarget": "ngrx-movies-rate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngrx-movies-rank:serve:production"
+              "devServerTarget": "ngrx-movies-rate:serve:production"
             }
           }
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/ngrx-movies-rank/"
+            "baseHref": "/ngrx-movies-rate/"
           }
         }
       }
     }
   },
-  "defaultProject": "ngrx-movies-rank"
+  "defaultProject": "ngrx-movies-rate",
+  "cli": {
+    "analytics": false
+  }
 }
