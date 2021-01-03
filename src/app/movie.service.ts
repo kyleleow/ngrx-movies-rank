@@ -30,7 +30,8 @@ export class MovieService {
     return this.getMoviesByState().pipe(
       map(movies => {
         return movies.slice().sort(compareRateInDescending);
-      })
+      }),
+      map(movies => movies.map(movie => ({...movie}))) //clone
     );
   }
 }

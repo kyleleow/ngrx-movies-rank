@@ -17,3 +17,8 @@ export const moviesLoadSuccessfully = createAction(
   '[Movies API] Movies Loaded Successfully',
   props<{ payload: Movie[] }>()
 );
+
+export const rateMovie = createAction(
+  '[List Page] Rate Single Movie',
+  props<{ payload: Movie}>()
+);

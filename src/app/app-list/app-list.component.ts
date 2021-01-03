@@ -37,6 +37,10 @@ export class AppListComponent implements OnInit {
     this.store.dispatch({ type: '[List Page] Load Movies' });
   }
 
+  updateRating(movie: Movie) {
+    this.store.dispatch({ type: '[List Page] Rate Single Movie', payload: movie});
+  }
+
   startRandomRate(): void {
     this.isRating = true;
     this.setRatingTimeout();
